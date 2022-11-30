@@ -1,0 +1,10 @@
+ocha_search.admin_settings:
+  path: '/admin/config/search/gcse-config'
+  defaults:
+    _form: '\Drupal\ocha_search\Form\OchaSearchSettingsForm'
+    _title: 'OCHA Search GCSE configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+route_callbacks:
+  - '\Drupal\ocha_search\Routing\OchaSearchRoutes::routes'

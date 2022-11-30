@@ -1,0 +1,5 @@
+services:
+  ocha_search.search_service:
+    class: Drupal\ocha_search\Services\OchaSearchService
+    arguments:
+      - '@config.factory'

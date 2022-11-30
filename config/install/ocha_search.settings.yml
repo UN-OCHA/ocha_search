@@ -1,0 +1,15 @@
+type: config_object
+label: 'Ocha Search settings'
+mapping:
+  results_page_path:
+    type: text
+    label: 'Results page path'
+  search_text:
+    type: text
+    label: 'Search page text'
+  default_refinement:
+    type: text
+    label: 'Default Refinement'
+  gcse_id:
+    type: text
+    label: 'GCSE ID'
