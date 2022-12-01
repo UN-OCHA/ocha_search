@@ -26,11 +26,19 @@ class OchaSearchService {
   }
 
   /**
-   * Get path.
+   * Get site results path.
    */
-  public function getPath() {
+  public function getSitePath() {
     $config = $this->configFactory->get('ocha_search.settings');
-    return $config->get('results_page_path');
+    return $config->get('site_results_page_path');
+  }
+
+  /**
+   * Get Ocha-wide results path.
+   */
+  public function getOchaWidePath() {
+    $config = $this->configFactory->get('ocha_search.settings');
+    return $config->get('ocha_wide_results_page_path');
   }
 
 }

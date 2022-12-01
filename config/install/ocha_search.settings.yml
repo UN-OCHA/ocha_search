@@ -1,15 +1,21 @@
 type: config_object
 label: 'Ocha Search settings'
 mapping:
-  results_page_path:
+  site_results_page_path:
     type: text
-    label: 'Results page path'
+    label: 'Site results page path'
+  ocha_wide_results_page_path:
+    type: text
+    label: 'Ocha-wide results page path'
   search_text:
     type: text
-    label: 'Search page text'
-  default_refinement:
+    label: 'Site search page text'
+  site_gcse_id:
     type: text
-    label: 'Default Refinement'
-  gcse_id:
+    label: 'Site GCSE ID'
+  ocha_wide_gcse_id:
     type: text
-    label: 'GCSE ID'
+    label: 'Ocha-wide GCSE ID'
+site_results_page_path: results
+ocha_wide_results_page_path: ocha-wide-results
+ocha_wide_gcse_id: 92f65997481234c49

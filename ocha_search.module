@@ -13,9 +13,11 @@ function ocha_search_theme($existing, $type, $theme, $path) {
     'ocha_search_results_page' => [
       'template' => 'results-page',
       'variables' => [
+        'title' => NULL,
         'search_text' => NULL,
         'gcse_id' => NULL,
-        'default_refinement' => NULL,
+        'toggle_link_text' => NULL,
+        'toggle_link_path' => NULL,
       ],
     ],
   ];

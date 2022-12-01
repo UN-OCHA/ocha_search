@@ -14,12 +14,24 @@ class OchaSearchRoutes {
    */
   public function routes() {
     $routes = [];
-    $results_path = \Drupal::service('ocha_search.search_service')->getPath();
-    $routes['ocha_search.search'] = new Route(
-      '/' . $results_path,
+    $site_results_path = \Drupal::service('ocha_search.search_service')->getSitePath();
+    $ocha_wide_results_path = \Drupal::service('ocha_search.search_service')->getOchaWidePath();
+    $routes['ocha_search.site_search'] = new Route(
+      '/' . $site_results_path,
       [
-        '_controller' => '\Drupal\ocha_search\Controller\OchaSearchController::search',
-        '_title' => 'Search',
+        '_controller' => '\Drupal\ocha_search\Controller\OchaSearchController::siteSearch',
+        '_title' => 'Site search',
+      ],
+      [
+        '_permission' => 'access content',
+      ]
+    );
+
+    $routes['ocha_search.ocha_wide_search'] = new Route(
+      '/' . $ocha_wide_results_path,
+      [
+        '_controller' => '\Drupal\ocha_search\Controller\OchaSearchController::ochaWideSearch',
+        '_title' => 'OCHA-wide Search',
       ],
       [
         '_permission' => 'access content',

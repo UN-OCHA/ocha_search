@@ -1,8 +1,9 @@
 # OCHA search module
 ============================
 
-This modules provides basic configuration and a dedicated search page for
-results from Google Custom Search Engine searches.
+This modules provides basic configuration and two search results pages for
+results from Google Custom Search Engine searches - one, to be configured, for
+the site the module is installed on, the other for OCHA-wide results.
 
 ## Additional setup
 The search box and the styling should be added to the subtheme.
@@ -22,20 +23,18 @@ It requires a GCSE ID, which comes from the Google config page.
 That ID must be added on the module config page.
 
 ### Google config
-The 'standard' configuration options are included in the xml files in the
-gcse_config directory. These can be uploaded to a custom search engine via the
-advanced tab in the setup.
-
-For context-cse.yml - change SITE NAME and site_name accordingly.
-For annotations.yml - add a 'refinement' with only urls from the current site.
+The 'standard' configuration options are included in an xml file in the
+gcse_config directory. It can be uploaded to a custom search engine via the
+advanced tab in the setup, then the name and description edited accordingly.
 
 All the color preferences and some other styling choices are included in a
 css file in the theme, so configuration of those in the can be ignored.
 
 ### Module config
-Found on the Google configuration page:
-The GCSE ID
-The name of the 'refinement' for the site search.
+The GCSE ID for the current site, found on the Google configuration page:
 Optional local settings:
-The results page, if a different path than '/results' is required.
-A descriptive text for the search results page.
+The path for the results page for site-only search, if a different path than
+'/results'.
+The path for the results page for Ocha-wide search, if a different path than
+'/ocha-wide-results'.
+A descriptive text for the search results pages.
