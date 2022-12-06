@@ -15,7 +15,6 @@ class OchaSearchRoutes {
   public function routes() {
     $routes = [];
     $site_results_path = \Drupal::service('ocha_search.search_service')->getSitePath();
-    $ocha_wide_results_path = \Drupal::service('ocha_search.search_service')->getOchaWidePath();
     $routes['ocha_search.site_search'] = new Route(
       '/' . $site_results_path,
       [
@@ -24,9 +23,13 @@ class OchaSearchRoutes {
       ],
       [
         '_permission' => 'access content',
+      ],
+      [
+        'no_cache' => 'TRUE',
       ]
     );
 
+    $ocha_wide_results_path = \Drupal::service('ocha_search.search_service')->getOchaWidePath();
     $routes['ocha_search.ocha_wide_search'] = new Route(
       '/' . $ocha_wide_results_path,
       [
@@ -35,6 +38,9 @@ class OchaSearchRoutes {
       ],
       [
         '_permission' => 'access content',
+      ],
+      [
+        'no_cache' => TRUE,
       ]
     );
 

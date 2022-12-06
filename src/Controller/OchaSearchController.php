@@ -18,10 +18,11 @@ class OchaSearchController extends ControllerBase {
    *   A renderable array.
    */
   public function siteSearch(Request $request) {
+    $parameter = $request->query->get('gsc.q') ?? $request->query->get('q');
     $toggle_link_path = Url::fromRoute(
       'ocha_search.ocha_wide_search',
       [],
-      ['query' => ['q' => $request->query->get('q')]]
+      ['query' => ['q' => $parameter]]
     )->toString();
     return [
       '#title' => $this->t('Site search'),
@@ -40,10 +41,11 @@ class OchaSearchController extends ControllerBase {
    *   A renderable array.
    */
   public function ochaWideSearch(Request $request) {
+    $parameter = $request->query->get('gsc.q') ?? $request->query->get('q');
     $toggle_link_path = Url::fromRoute(
       'ocha_search.site_search',
       [],
-      ['query' => ['q' => $request->query->get('q')]]
+      ['query' => ['q' => $parameter]]
     )->toString();
     return [
       '#title' => $this->t('OCHA-wide search'),
