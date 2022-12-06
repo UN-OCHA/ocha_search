@@ -18,21 +18,15 @@
 
 <div class="gcse-results-page">
   <script async defer src="https://cse.google.com/cse.js?cx={{ gcse_id }}"></script>
-  <div class="ocha-search-toggle">
-    <a href="{{ toggle_link_path }}">{{ toggle_link_text }}</a>
-  </div>
 
-  <nav class="tabs" role="navigation" aria-label="Tabs">
-    <h2 class="visually-hidden">Search scope</h2>
-    <ul class="tabs primary">
-      <li {% if scope == 'site' %}class="is-active"{% endif %}>
-        <a href="{% if scope == 'site' %}#{% else %}{{ toggle_link_path }}{% endif %}" {% if scope == 'site' %}class="is-active"{% endif %}>{{ toggle_link_site_text }}{% if scope == 'site' %} <span class="visually-hidden">(active tab)</span>{% endif %}</a>
-      </li>
-      <li {% if scope == 'ocha-wide' %}class="is-active"{% endif %}>
-        <a href="{% if scope == 'ocha-wide' %}#{% else %}{{ toggle_link_path }}{% endif %}" {% if scope == 'ocha-wide' %}class="is-active"{% endif %}">{{ toggle_link_ocha_text }}{% if scope == 'ocha-wide' %} <span class="visually-hidden">(active tab)</span>{% endif %}</a>
-      </li>
-    </ul>
-  </nav>
+  <ul class="tabs ocha-search-toggle">
+    <li{% if scope == 'site' %} class="is-active"{% endif %}>
+      <a href="{% if scope == 'site' %}#{% else %}{{ toggle_link_path }}{% endif %}"{% if scope == 'site' %} class="is-active"{% endif %}>{{ toggle_link_site_text }}{% if scope == 'site' %} <span class="visually-hidden">(active tab)</span>{% endif %}</a>
+    </li>
+    <li{% if scope == 'ocha-wide' %} class="is-active"{% endif %}>
+      <a href="{% if scope == 'ocha-wide' %}#{% else %}{{ toggle_link_path }}{% endif %}"{% if scope == 'ocha-wide' %} class="is-active"{% endif %}>{{ toggle_link_ocha_text }}{% if scope == 'ocha-wide' %} <span class="visually-hidden">(active tab)</span>{% endif %}</a>
+    </li>
+  </ul>
 
   <div class="gcse-searchbox-only" data-resultsUrl="{{ url('<current>') }}"></div>
 
@@ -41,5 +35,4 @@
   {% endif %}
 
   <div class="gcse-searchresults-only"></div>
-  </div>
 </div>
