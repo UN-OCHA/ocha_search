@@ -27,9 +27,11 @@ class OchaSearchController extends ControllerBase {
     return [
       '#title' => $this->t('Site search'),
       '#gcse_id' => $this->config('ocha_search.settings')->get('site_gcse_id'),
-      '#toggle_link_text' => $this->t('OCHA-wide search results'),
+      '#scope' => 'site',
+      '#toggle_link_site_text' => $this->t('Site-only search'),
+      '#toggle_link_ocha_text' => $this->t('OCHA-wide search'),
       '#toggle_link_path' => $toggle_link_path,
-      '#search_text' => $this->config('ocha_search.settings')->get('search_text'),
+      '#search_text' => $this->config('ocha_search.settings')->get('search_site_text'),
       '#theme' => 'ocha_search_results_page',
     ];
   }
@@ -49,10 +51,12 @@ class OchaSearchController extends ControllerBase {
     )->toString();
     return [
       '#title' => $this->t('OCHA-wide search'),
-      '#toggle_link_text' => $this->t('Site-only search'),
+      '#scope' => 'ocha-wide',
+      '#toggle_link_site_text' => $this->t('Site-only search'),
+      '#toggle_link_ocha_text' => $this->t('OCHA-wide search'),
       '#toggle_link_path' => $toggle_link_path,
       '#gcse_id' => $this->config('ocha_search.settings')->get('ocha_wide_gcse_id'),
-      '#search_text' => $this->config('ocha_search.settings')->get('search_text'),
+      '#search_text' => $this->config('ocha_search.settings')->get('search_ocha_text'),
       '#theme' => 'ocha_search_results_page',
     ];
   }

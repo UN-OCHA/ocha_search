@@ -53,11 +53,18 @@ class OchaSearchSettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('ocha_wide_results_page_path'),
     ];
 
-    $form['search_text'] = [
+    $form['search_site_text'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Search page text'),
-      '#description' => $this->t('Optional text to add to the search results page.'),
-      '#default_value' => $config->get('search_text'),
+      '#title' => $this->t('Site search page text'),
+      '#description' => $this->t('Optional text to add to the site search results page.'),
+      '#default_value' => $config->get('search_site_text'),
+    ];
+
+    $form['search_ocha_text'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('OCHA-wide search page text'),
+      '#description' => $this->t('Optional text to add to the OCHA-wide search results page.'),
+      '#default_value' => $config->get('search_ocha_text'),
     ];
 
     $form['site_gcse_id'] = [
@@ -84,7 +91,8 @@ class OchaSearchSettingsForm extends ConfigFormBase {
     $this->config(static::SETTINGS)
       ->set('site_results_page_path', $form_state->getValue('site_results_page_path'))
       ->set('ocha_wide_results_page_path', $form_state->getValue('ocha_wide_results_page_path'))
-      ->set('search_text', $form_state->getValue('search_text'))
+      ->set('search_site_text', $form_state->getValue('search_site_text'))
+      ->set('search_ocha_text', $form_state->getValue('search_ocha_text'))
       ->set('site_gcse_id', $form_state->getValue('site_gcse_id'))
       ->set('ocha_wide_gcse_id', $form_state->getValue('ocha_wide_gcse_id'))
       ->save();
