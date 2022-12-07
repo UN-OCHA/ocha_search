@@ -12,7 +12,7 @@ styling can be extended by a subtheme library.
 
 `common_design_subtheme.info.yml`
 ```
-ibraries-extend:
+libraries-extend:
   ocha_search/google-cse:
     - common_design_subtheme/google-cse
 ```
