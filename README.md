@@ -39,7 +39,7 @@ of the Common Design where the Global Search is adapted for this.
 There are two sets of configurations required:
 'Google config', on the Google site at
 https://programmablesearchengine.google.com/controlpanel/all
-'Module config', on the OCHA site at
+'Internal config', on the OCHA site at
 /admin/config/search/gcse-config
 
 Search results will appear at `/results` unless set to another path in the 'internal config'. This is to avoid conflict with `/search` as that path may
@@ -56,11 +56,12 @@ advanced tab in the setup, then the name and description edited accordingly.
 All the color preferences and some other styling choices are included in a
 css file in the module, so configuration of those in the can be ignored.
 
-### Module config
-The GCSE ID for the current site, found on the Google configuration page:
-Optional local settings:
-The path for the results page for site-only search, if a different path than
+### Internal config
+* The path for the results page for site-only search, if a different path than
 '/results'.
-The path for the results page for Ocha-wide search, if a different path than
+* The path for the results page for Ocha-wide search, if a different path than
 '/ocha-wide-results'.
-A descriptive text for the search results pages.
+* A descriptive text for the site search results page.
+* A descriptive text for the OCHA-wide search results pages.
+* The GCSE ID for the current site search, found on the Google config page.
+* The GCSE ID for the OCHA-wide search, normally 92f65997481234c49.
