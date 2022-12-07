@@ -7,9 +7,10 @@ the site the module is installed on, the other for OCHA-wide results.
 
 ## Additional setup in the subtheme
 The search form for the Global Search should be added to the subtheme template,
-specifically with the form's action value set to `/{{ results_page_path }}`
+specifically with the form's action value set to `/{{ results_page_path }}` and
+the `input name="q"` which is the GCSE default.
 
-The `results_page_path` vairable is available with a preprocess function added
+The `results_page_path` variable is available with a preprocess function added
 to the subtheme:
 ```
 /**
@@ -21,7 +22,7 @@ function common_design_subtheme_preprocess_page(&$variables) {
 }
 ```
 
-Optionally, the result page template can overridden in the subtheme, and the
+Optionally, the result page template can be overridden in the subtheme, and the
 styling can be extended by a subtheme library.
 
 `common_design_subtheme.info.yml`
