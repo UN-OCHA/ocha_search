@@ -6,8 +6,22 @@ results from Google Custom Search Engine searches - one, to be configured, for
 the site the module is installed on, the other for OCHA-wide results.
 
 ## Additional setup in the subtheme
-The search box for the Global Search should be added to the subtheme template.
-Optionally, the result page template can overridden in the subtheme , and the
+The search form for the Global Search should be added to the subtheme template,
+specifically with the form's action value set to `/{{ results_page_path }}`
+
+The `results_page_path` vairable is available with a preprocess function added
+to the subtheme:
+```
+/**
+ * Implements hook_preprocess_page().
+ */
+function common_design_subtheme_preprocess_page(&$variables) {
+  // Get results page path - default to 'results'.
+  $variables['results_page_path'] = \Drupal::config('ocha_search.settings')->get('site_results_page_path') ?? 'results';
+}
+```
+
+Optionally, the result page template can overridden in the subtheme, and the
 styling can be extended by a subtheme library.
 
 `common_design_subtheme.info.yml`
@@ -18,7 +32,7 @@ libraries-extend:
 ```
 
 See https://github.com/UN-OCHA/common-design-site/pull/214/files for an example
-of the Common Design where the search box is adapted for this.
+of the Common Design where the Global Search is adapted for this.
 
 ## Configuration
 There are two sets of configurations required:
