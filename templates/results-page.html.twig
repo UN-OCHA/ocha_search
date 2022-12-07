@@ -13,9 +13,12 @@
  */
 #}
 
-{{ attach_library('common_design/cd-tabs') }}
-{{ attach_library('common_design_subtheme/google-cse') }}
+{% block library %}
+  {{ attach_library('ocha_search/google-cse') }}
+  {{ attach_library('common_design/cd-tabs') }}
+{% endblock %}
 
+{% block search %}
 <div class="gcse-results-page">
   <script async defer src="https://cse.google.com/cse.js?cx={{ gcse_id }}"></script>
 
@@ -28,11 +31,12 @@
     </li>
   </ul>
 
-  <div class="gcse-searchbox-only" data-resultsUrl="{{ url('<current>') }}"></div>
-
   {% if search_text %}
-  <p class="gcse-search-custom-text">{{ search_text }}</p>
+    <p class="gcse-search-custom-text">{{ search_text }}</p>
   {% endif %}
+
+  <div class="gcse-searchbox-only" data-resultsUrl="{{ url('<current>') }}"></div>
 
   <div class="gcse-searchresults-only"></div>
 </div>
+{% endblock %}
