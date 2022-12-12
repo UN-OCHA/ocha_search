@@ -6,9 +6,7 @@ the site the module is installed on, the other for OCHA-wide results.
 
 ## Additional setup in the subtheme
 
-Copy `templates/block--ocha-search-block.html.twig` to your custom theme.
-
-Optionally, the result page template can be overridden in the subtheme, and the
+The result page template can be overridden in the subtheme, and the
 styling can be extended by a subtheme library.
 
 `common_design_subtheme.info.yml`
