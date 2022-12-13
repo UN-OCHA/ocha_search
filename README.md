@@ -17,6 +17,10 @@ libraries-extend:
     - common_design_subtheme/google-cse
 ```
 
+This module also provides a Drupal block for the search form. Place this block
+in the Header Search region. The markup of the search form currently relied on
+the Common Design base theme for styles.
+
 ## Configuration
 
 There are two sets of configurations required:
