@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Annotations start="0" num="6" total="6">
+  <Annotation about="*.worldhumanitarianday.org/*" timestamp="0x0005eeb3fc9c4f3e" href="ChwqLndvcmxkaHVtYW5pdGFyaWFuZGF5Lm9yZy8qEL6e8eS_1vsC">
+    <Label name="_include_"/>
+    <AdditionalData attribute="original_url" value="*.worldhumanitarianday.org/*"/>
+    <AdditionalData attribute="file" value="example-annotations.xml"/>
+  </Annotation>
+  <Annotation about="*.humdata.org/*" timestamp="0x0005eeb3fc9c4f39" href="Cg8qLmh1bWRhdGEub3JnLyoQuZ7x5L_W-wI">
+    <Label name="_include_"/>
+    <Label name="data"/>
+    <AdditionalData attribute="original_url" value="*.humdata.org/*"/>
+    <AdditionalData attribute="file" value="example-annotations.xml"/>
+  </Annotation>
+  <Annotation about="*.hum-insight.info/*" timestamp="0x0005eeb3fc9c4f36" href="ChQqLmh1bS1pbnNpZ2h0LmluZm8vKhC2nvHkv9b7Ag">
+    <Label name="_include_"/>
+    <AdditionalData attribute="original_url" value="*.hum-insight.info/*"/>
+    <AdditionalData attribute="file" value="example-annotations.xml"/>
+  </Annotation>
+  <Annotation about="*.reliefweb.int/*" timestamp="0x0005eeb3fc9c4f32" href="ChEqLnJlbGllZndlYi5pbnQvKhCynvHkv9b7Ag">
+    <Label name="_include_"/>
+    <Label name="response"/>
+    <AdditionalData attribute="original_url" value="*.reliefweb.int/*"/>
+    <AdditionalData attribute="file" value="example-annotations.xml"/>
+  </Annotation>
+  <Annotation about="*.interagencystandingcommittee.org/*" timestamp="0x0005eeb3fc9c4f2f" href="CiQqLmludGVyYWdlbmN5c3RhbmRpbmdjb21taXR0ZWUub3JnLyoQr57x5L_W-wI">
+    <Label name="_include_"/>
+    <AdditionalData attribute="original_url" value="*.interagencystandingcommittee.org/*"/>
+    <AdditionalData attribute="file" value="example-annotations.xml"/>
+  </Annotation>
+  <Annotation about="*.unocha.org/*" timestamp="0x0005eeb3fc9c4f13" href="Cg4qLnVub2NoYS5vcmcvKhCTnvHkv9b7Ag">
+    <Label name="_include_"/>
+    <AdditionalData attribute="original_url" value="*.unocha.org/*"/>
+    <AdditionalData attribute="file" value="example-annotations.xml"/>
+  </Annotation>
+</Annotations>
