@@ -19,7 +19,9 @@ libraries-extend:
 
 This module also provides a Drupal block for the search form. Place this block
 in the Header Search region. The markup of the search form currently relies on
-the Common Design base theme for styles.
+the [Common Design](common-design) base theme for styles and javascript.
+
+  [common-design]: https://github.com/UN-OCHA/common_design
 
 ## Configuration
 
