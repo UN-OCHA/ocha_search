@@ -29,7 +29,8 @@ https://programmablesearchengine.google.com/controlpanel/all
 'Internal config', on the OCHA site at
 /admin/config/search/gcse-config
 
-Search results will appear at `/results` unless set to another path in the 'internal config'. This is to avoid conflict with `/search` as that path may
+Search results will appear at `/results` unless set to another path in the
+'internal config'. This is to avoid conflict with `/search` as that path may
 already be defined by other modules.
 
 It requires a GCSE ID, which comes from the Google config page.
@@ -42,7 +43,8 @@ gcse_config directory. It can be uploaded to a custom search engine via the
 advanced tab in the setup, then the name and description edited accordingly.
 
 All the color preferences and some other styling choices are included in a
-css file in the module, so configuration of those in the can be ignored.
+css file in the module, so configuration of those in the settings can be
+ignored.
 
 ### Internal config
 
