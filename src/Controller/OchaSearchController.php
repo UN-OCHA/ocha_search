@@ -28,6 +28,7 @@ class OchaSearchController extends ControllerBase {
       '#title' => $this->t('Site search'),
       '#gcse_id' => $this->config('ocha_search.settings')->get('site_gcse_id'),
       '#scope' => 'site',
+      '#enable_ocha_wide_results' => $this->config('ocha_search.settings')->get('enable_ocha_wide_results'),
       '#toggle_link_site_text' => $this->t('Site-only search'),
       '#toggle_link_ocha_text' => $this->t('OCHA-wide search'),
       '#toggle_link_path' => $toggle_link_path,
@@ -52,6 +53,7 @@ class OchaSearchController extends ControllerBase {
     return [
       '#title' => $this->t('OCHA-wide search'),
       '#scope' => 'ocha-wide',
+      '#enable_ocha_wide_results' => TRUE,
       '#toggle_link_site_text' => $this->t('Site-only search'),
       '#toggle_link_ocha_text' => $this->t('OCHA-wide search'),
       '#toggle_link_path' => $toggle_link_path,
