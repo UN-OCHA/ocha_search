@@ -28,7 +28,9 @@ libraries-extend:
 
 This module also provides a Drupal block for the search form. Place this block
 in the Header Search region. The markup of the search form currently relies on
-the Common Design base theme for styles.
+the [Common Design][common-design] base theme for styles and javascript.
+
+  [common-design]: https://github.com/UN-OCHA/common_design
 
 ## Configuration
 
@@ -67,7 +69,7 @@ Site search:
   * A descriptive text for the site search results page.
   * The GCSE ID for the current site search, found on the Google config page.
 OCHA-wide search:
-  * A checkbox to Enable OCHA-wide results - if unchecked, only the site search 
+  * A checkbox to Enable OCHA-wide results - if unchecked, only the site search
   will be shown.
   * The path for the results page for Ocha-wide search, if a different path than
   '/ocha-wide-results'.
