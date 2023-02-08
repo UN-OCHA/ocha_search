@@ -46,14 +46,14 @@ already be defined by other modules.
 
 OCHA-wide search results will by default appear at `/ocha-wide-results`.
 They can be turned off via the 'Enable tab for OCHA-wide results' checkbox, and
-the path can be configured. Both options on the internal config page.
+the path can be configured. Both options are on the internal config page.
 
 Site search requires a GCSE ID, which comes from the Google config page.
 That ID must be added on the internal config page.
 
 ### Google config
 
-The 'standard' configuration options are included in `example-context-cse.xml
+The 'standard' configuration options are included in `example-context-cse.xml`
 in the `gcse_config` directory. The file can be uploaded to a custom search
 engine via the advanced tab in the setup. The name and description should be
 edited accordingly.
@@ -71,7 +71,7 @@ Site search:
 OCHA-wide search:
   * A checkbox to Enable OCHA-wide results - if unchecked, only the site search
   will be shown.
-  * The path for the results page for Ocha-wide search, if a different path than
+  * The path for the results page for OCHA-wide search, if a different path than
   '/ocha-wide-results'.
   * A descriptive text for the OCHA-wide search results pages.
   * The GCSE ID for the OCHA-wide search. Leave this as the default value for
