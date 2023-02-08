@@ -109,11 +109,6 @@ a.gsc-trailing-more-results:link,
   display: none !important;
 }
 
-/* Hides the 'All' tab as we're only using refinements. */
-/* .gsc-refinementBlock > div:first-child {
-  display: none !important;
-} */
-
 .gcsc-more-maybe-branding-root {
   display: none !important;
 }
