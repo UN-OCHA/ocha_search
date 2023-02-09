@@ -6,6 +6,7 @@
  * Available variables:
  * - gcse_id: ID of Google Custom Search Engine.
  * - scope: 'site' or 'ocha-wide'.
+ * - enable_ocha_wide_results: whether to show ocha-wide results or not..
  * - toggle_link_path: relative url of the other search page.
  * - toggle_link_site_text: text for link to the site search page.
  * - toggle_link_ocha_text: text for link to the OCHA-wide search page.
@@ -22,6 +23,7 @@
 <div class="gcse-results-page">
   <script async defer src="https://cse.google.com/cse.js?cx={{ gcse_id }}"></script>
 
+  {%if enable_ocha_wide_results %}
   <ul class="tabs ocha-search-toggle">
     <li{% if scope == 'site' %} class="is-active"{% endif %}>
       <a href="{% if scope == 'site' %}#{% else %}{{ toggle_link_path }}{% endif %}"{% if scope == 'site' %} class="is-active"{% endif %}>{{ toggle_link_site_text }}{% if scope == 'site' %} <span class="visually-hidden">(active tab)</span>{% endif %}</a>
@@ -30,6 +32,7 @@
       <a href="{% if scope == 'ocha-wide' %}#{% else %}{{ toggle_link_path }}{% endif %}"{% if scope == 'ocha-wide' %} class="is-active"{% endif %}>{{ toggle_link_ocha_text }}{% if scope == 'ocha-wide' %} <span class="visually-hidden">(active tab)</span>{% endif %}</a>
     </li>
   </ul>
+  {% endif %}
 
   {% if search_text %}
     <p class="gcse-search-custom-text">{{ search_text }}</p>

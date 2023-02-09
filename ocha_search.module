@@ -23,6 +23,7 @@ function ocha_search_theme($existing, $type, $theme, $path) {
         'search_text' => NULL,
         'gcse_id' => NULL,
         'scope' => NULL,
+        'enable_ocha_wide_results' => NULL,
         'toggle_link_site_text' => NULL,
         'toggle_link_ocha_text' => NULL,
         'toggle_link_path' => NULL,
