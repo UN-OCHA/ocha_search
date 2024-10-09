@@ -1,5 +1,5 @@
 <div class="cd-search">
-  <div class="cd-search__form" aria-labelledby="cd-search-btn" data-cd-toggable="{{ 'Search'|trans }}" data-cd-component="cd-search" data-cd-logo="search" data-cd-focus-target="cd-search" id="block-searchform" role="search">
+  <div class="cd-search__form" aria-labelledby="cd-search-btn" data-cd-toggable="{{ 'Search'|t }}" data-cd-component="cd-search" data-cd-logo="search" data-cd-focus-target="cd-search" id="block-searchform" role="search">
     <h2 class="visually-hidden">{% trans %}Search form{% endtrans %}</h2>
     <form action="/{{ results_page_path }}" method="get" accept-charset="UTF-8">
       <div class="form--inline clearfix">
@@ -8,11 +8,11 @@
           <input placeholder="What are you looking for?" class="cd-search__input form-text" type="text" id="cd-search" name="q" value="{{ keyword }}" size="30" maxlength="128" autocomplete="off">
         </div>
         <div class="form-actions js-form-wrapper form-wrapper">
-          <button data-twig-suggestion="search_submit" class="cd-search__submit button js-form-submit form-submit" value="{{ 'Search'|trans }}" type="submit">
+          <button data-twig-suggestion="search_submit" class="cd-search__submit button js-form-submit form-submit" value="{{ 'Search'|t }}" type="submit">
             <svg class="cd-icon cd-icon--search" width="16" height="16" aria-hidden="true" focusable="false">
               <use xlink:href="#cd-icon--search"></use>
             </svg>
-            <span class="visually-hidden">{{ 'Search'|trans }}</span>
+            <span class="visually-hidden">{{ 'Search'|t }}</span>
           </button>
         </div>
       </div>
