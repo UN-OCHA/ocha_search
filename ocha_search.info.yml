@@ -3,6 +3,6 @@ description: Creates a search page using GCSE.
 package: OCHA
 
 type: module
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 
 configure: ocha_search.admin_settings
